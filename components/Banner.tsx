@@ -1,6 +1,7 @@
+import Image from 'next/image'
 import { Movie } from "@/typing"
 import { useEffect, useState } from "react"
-import Image from 'next/image'
+import { baseUrl } from '@/constants/movie'
 
 interface Props {
   netflixOriginals : Movie[]
@@ -15,8 +16,13 @@ function Banner({netflixOriginals}: Props) {
 console.log(movie)
   return (
     <div>
-      <div>
-        <Image src={`${baseUrl}${movie?.backdrop_path}`}/>
+      <div className=' absolute top-0 left-0 z-10 h-[95vh] w-screen'>
+        <Image
+        src={`${baseUrl}${movie?.backdrop_path || movie?.poster_path}`}
+        layout='fill'
+        objectFit='cover'
+        alt=''
+        />
       </div>
     </div>
   )
