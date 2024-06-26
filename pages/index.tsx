@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import Header from "@/components/Header";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -12,6 +13,7 @@ const Home:NextPage = () =>{
       </Head>
       <Header/>
       <main>
+        <Banner/>
         <section>
 
         </section>
