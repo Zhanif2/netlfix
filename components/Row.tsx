@@ -1,7 +1,6 @@
 import { Movie } from "@/typing";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/outline";
 import Thumbnail from "./Thumbnail";
-import { Html } from "next/document";
 import { useRef, useState } from "react";
 
 interface Props {
