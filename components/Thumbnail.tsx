@@ -2,7 +2,7 @@ import { Movie } from "@/typing";
 import Image from "next/image";
 
 interface Props {
-  movie: Movie;
+  movie: Movie ;
 }
 function Thumbnail({ movie }: Props) {
   return (
