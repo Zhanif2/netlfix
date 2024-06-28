@@ -1,6 +1,7 @@
 import {BellIcon, SearchIcon} from "@heroicons/react/solid"
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,7 +29,7 @@ function Header() {
   return (
    <header className={`${isScrolled && "bg-[#141414]"}`}>
     <div className="flex item-center space-x-2 md:space-x-10">
-    <img
+    <Image
           src="https://rb.gy/ulxxee"
           alt=""
           width={100}
