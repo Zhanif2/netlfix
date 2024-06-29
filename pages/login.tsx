@@ -29,15 +29,24 @@ function login() {
 
       <form className="relative mt-24 space-y-8 rounded bg-black/75 py-10 px-6 md:mt-0 
       md:max-w-md md:px-14">
-        <h1>Sign In</h1>
+        <h1 className="text-4xl font-semibold">Sign In</h1>
         <div className="space-y-4">
-            <label>
+            <label className="inline-block w-full">
             <input type="email" placeholder="Email" className="input"/>
             </label>
-            <label>
+            <label className="inline-block w-full">
             <input type="password" placeholder="Password" className="input"/>
             </label>
         </div>
+        <button className="w-full rounded bg-[#e50914] py-3 font-semibold">
+            Sign In
+            </button>
+            <div className="text-[gray]">
+                New to Netflix?{`  `}
+                <button type="submit" className="text-white hover:underline">
+                    Sign Up Now
+                    </button>
+            </div>
       </form>
     </div>
   );
