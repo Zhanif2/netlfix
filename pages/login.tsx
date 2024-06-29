@@ -16,7 +16,14 @@ function login() {
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+
+  const onSubmit: SubmitHandler<Inputs> = async (email, password) => {
+    if (login) {
+       // await signIn(email, password)
+    } else{
+        // await signUp(email,password)
+    }
+  };
   return (
     <div
       className="relative flex h-screen w-screen flex-col bg-black md:items-center
@@ -55,7 +62,7 @@ function login() {
               className="input"
               {...register("email", { required: true })}
             />
-              {errors.email && (
+            {errors.email && (
               <p className="p-1 text-[13px] font-light  text-orange-500">
                 Please enter a valid email.
               </p>
@@ -75,12 +82,19 @@ function login() {
             )}
           </label>
         </div>
-        <button className="w-full rounded bg-[#e50914] py-3 font-semibold">
+        <button
+          className="w-full rounded bg-[#e50914] py-3 font-semibold"
+          onClick={() => setLogin(true)}
+        >
           Sign In
         </button>
         <div className="text-[gray]">
           New to Netflix?{`  `}
-          <button type="submit" className="text-white hover:underline">
+          <button
+            type="submit"
+            className="text-white hover:underline"
+            onClick={() => setLogin(false)}
+          >
             Sign Up Now
           </button>
         </div>
